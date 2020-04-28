@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Заявка принята</title>
+    <link rel="stylesheet" href="confirm/css/bootstrap/framework/grid.css">
+    <link rel="stylesheet" href="confirm/css/bootstrap/framework/default.css">
+    <link rel="stylesheet" href="confirm/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.ksn.pw/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container bg">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-0 col-md-8 col-md-offset-2">
+                <section class="order">
+                    <h1 class="order__head">Спасибо за ваш заказ!</h1>
+                    <p class="order__details">В ближайшее время вам перезвонит
+                        <br> менеджер для уточнения деталей.</p>
+                </section>
+            </div>
+            <div class="order-info col-lg-offset-0 col-lg-6 col-md-8 col-md-offset-2">
+                <span class="order-info__name">Вас зовут:</span><span class="order-info__name_user"> <span id="leadprofit-name">&nbsp;</span></span>
+                <br>
+                <span class="order-info__phone-number">Ваш телефон</span><span class="order-info__phone-number_user"> <span id="leadprofit-phone">&nbsp;</span></span>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <section class="sale">
+                    <h2 class="sale__head">Ваш подарок!</h2>
+                    <p class="sale__gift">70% скидка</p>
+
+
+                </section>
+            </div>
+            <div class="col-lg-7">
+
+                <div class="sale-user">
+                    <p>Скидка действует <span>только для вас</span></p>
+                    <p class="sale-user__period-sale">До окончания действия скидки осталось:</p>
+                    <div class="countdown">
+                        <div class="countdown__item countdown__item_hour">
+                            <div>0</div>
+                            <div>0</div>
+                        </div>
+                        <div class="countdown__item countdown__item_hour">
+                            <div>0</div>
+                            <div>3</div>
+                        </div>
+                        <div class="countdown__item countdown__item_minute">
+                            <div>5</div>
+                            <div>4</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row sale_none">
+            <div class="col-xs-7 hit_succes">
+                <div class="hit-of-sales__success">
+                    <p>ФИНАЛЬНАЯ РАСПРОДАЖА!
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-5 hit_warning">
+                <div class="hit-od-sales__warning">
+                    <p>Успей добавить в заказ!</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" data-postland>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <section class="product first">
+                    <h3 class="product__header">{headline}</h3>
+
+                    <div class="product__img">
+                        <img src="{thumb}" width="430" height="270" alt="">
+                        <p>Осталось: <span id="count">6</span> шт.</p>
+                    </div>
+                    <div class="product__features">
+                        {description}
+                    </div>
+                    <div class="product__price">
+                        <div class="product__price_old">
+                            <span class="price-title">Старая цена</span> <br> <span class="old_price_val">{price-old-val}</span> <span class="old_price_cur">{price-cur}</span>
+                        </div>
+                        <div class="product__price_new">
+                            <span class="price-title">Цена со скидкой 70%</span> <br> <span class="new_price_val">{price-new-val}</span> <span class="new_price_cur">{price-cur}</span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button type="button" class="btn" data-comment="Заказ с постленда: {headline}" onclick="{counter}"> Добавить к заказу</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://click.lucky.online/js/leadprofit.js"></script>
+    <script src="https://luckylib24.ru/library/luckyshop/jquery.postlandPlugin-min.js"></script>
+    <script src="confirm/js/main.js"></script>
+    <script src="counter.js"></script>
+
+    <script>
+        $(document).postlandPlugin({
+            items: ['757', '1018', '756'],
+			country: ['ru', 'kz'],
+            counter: 49052939 
+        })
+    </script>
+
+</body>
+
+</html>
